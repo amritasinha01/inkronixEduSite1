@@ -1,0 +1,71 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}blog{% endblock title %}
+
+{% block main-content %}
+
+<div class="container my-4" style="background-image: url('{% static 'app/images/pics/backgteach.jpg' %}'); box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+  <div class="row">
+  <div class="offset-1 col-10">
+    <div class="card text-muted rounded shadow">
+      <div class="card-body text-center">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="{% static 'app\images\pics\n1.png' %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-6">
+            <br><br>
+            <h1 class="card-title text-muted" style="color: #4540D9 !important;" >HELLO CLASS!!!</h1>
+            <br>
+            <h2 class="card-title text-muted">YOUR DJANGO LECTURES ARE HERE</h2>
+            <!-- Add additional text here if needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-4" style="background-image: url('{% static 'app/images/pics/backgteach.jpg' %}'); box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+  <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+    {% for lecture in lectures %}
+      <div class="offset-1 col-10">
+        <div class="card bg-light rounded shadow mb-4" style="background-color: #F1F1FB;">
+          <div class="card-body">
+            <h3 class="card-title text-muted">{{ lecture.title }}</h3>
+            <p class="card-text text-muted"><b>By: {{ lecture.author }}</b></p>
+            <p class="card-text text-muted"><b>ON: </b>{{ lecture.date_posted }}</p>
+            <p class="card-text text-muted">{{ lecture.content }}</p>
+
+            {% if lecture.youtube_link %}
+              <p class="card-text text-muted"><b>YouTube Link: </b><a href="{{ lecture.youtube_link }}">{{ lecture.youtube_link }}</a></p>
+            {% endif %}
+
+            {% if lecture.zoom_link %}
+              <p class="card-text text-muted"><b>Zoom Link: </b><a href="{{ lecture.zoom_link }}">{{ lecture.zoom_link }}</a></p>
+            {% endif %}
+
+            {% if lecture.pdf_file %}
+              <p class="card-text text-muted"><b>PDF File: </b><a href="{{ lecture.pdf_file.url }}">{{ lecture.pdf_file.name }}</a></p>
+            {% endif %}
+
+            {% if lecture.word_file %}
+              <p class="card-text text-muted"><b>Word File: </b><a href="{{ lecture.word_file.url }}">{{ lecture.word_file.name }}</a></p>
+            {% endif %}
+
+            {% if lecture.internet_link %}
+              <p class="card-text text-muted"><b>Internet Link: </b><a href="{{ lecture.internet_link }}">{{ lecture.internet_link }}</a></p>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+<div style="margin-bottom: 50px;"></div> <!-- Add margin bottom -->
+
+{% endblock main-content %}

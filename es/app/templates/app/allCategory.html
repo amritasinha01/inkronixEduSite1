@@ -1,0 +1,68 @@
+
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}allCategory{% endblock title %}
+{% comment %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-3">
+           {% for category in categorys %}
+    <p>{{ category.name }}</p>
+{% endfor %}
+          </div>
+        <div class="col-sm-9">
+            <div class="row">
+               {% for category in categorys %}
+    <h3>{{ category.name }}</h3>
+    <img src="{{ category.category_image.url }}" alt="{{ category.name }}">
+{% endfor %}
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock main-content %}
+{% endcomment %}
+{% block main-content %}
+<div class="row ">
+    <div class="col-12">
+        <div class="card h-100 bg-light rounded-5 shadow-sm border-0" style="background-image: url('{% static 'app/images/pics/backgteach.jpg' %}');">
+            <h1 class="fw-bold mb-3 text-muted text-center" style="padding: 20px;">Explore Courses by Categories</h1>
+            <p class="card-text text-muted text-center" style="margin-bottom: 20px; padding: 20px;">
+                These courses cover diverse topics and cater to individuals with varying levels of expertise, from beginners to advanced users. Foundation for Digital Literacy: Computer courses serve as a foundation for developing digital literacy skills. They introduce learners to fundamental concepts, such as computer hardware, software, operating systems, and basic computer operations.
+
+                Programming and Software Development: Computer courses provide education on programming languages and software development methodologies. These courses enable learners to acquire coding skills and develop software applications, websites, and mobile apps.
+            </p>
+
+
+
+ <div class="container" style="background-image: url('{% static 'app/images/pics/backgteach.jpg' %}'); padding: 20px;">
+    <div class="row">
+        {% for category in categorys %}
+        <div class="col-sm-3">
+            <div class="card mb-5 shadow" style="width: 18rem;">
+                <img src="{{ category.book_image.url }}" alt="{{ category.name }}" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-muted">{{ category.name }}</h5>
+                    <a href="{% url 'course_list' category_id=category.id %}" class="btn btn-primary" style="background-color: #4540D9;">Available Courses</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+   </div>
+    </div>
+</div>
+
+
+
+
+{% endblock main-content %}
+

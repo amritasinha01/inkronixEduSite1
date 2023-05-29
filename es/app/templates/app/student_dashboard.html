@@ -1,0 +1,221 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block main-content %}
+<div class="container my-4" style="background-color: #F1F1FB; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="card text-muted rounded shadow">
+        <div class="card-body text-center">
+          <h1 class="card-title text-muted">HELLO STUDENT !!!</h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="container my-4" style="background-color: #F1F1FB; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+  <div class="row">
+    <div class="col-md-4">
+    <div class="card text-muted rounded shadow">
+  <img src="{% static 'app/images/pics/studentprofile.png' %}" class="card-img-top" alt="Card Image">
+  <div class="card-body text-center">
+    <h5 class="card-title">User Name</h5>
+    <p class="card-text">This is a beautiful card with some sample text. You can customize it further as per your needs.</p>
+    <a href="{% url 'study' %}" class="btn btn-primary" style="background-color: #4540D9;">Edit Profile</a>
+
+  </div>
+</div>
+
+    </div>
+    <div class="col-md-8">
+      <div class="card text-muted rounded shadow" style="background-image: url('{% static 'app/images/pics/backgteach.jpg' %}');">
+        <div class="card-body">
+           <div class="row mb-4 ">
+    <div class="col-md-12">
+
+      <div class="card text-muted rounded shadow">
+        <div class="card-body text-center">
+          <h1 class="card-title text-muted">Online Lectures.....</h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+           <div class="row">
+    <div class="col-md-12">
+
+      <div class="card text-muted rounded shadow">
+        <div class="card-body text-center">
+           <p class="card-text" style="margin-bottom: 20px;" >Lorem ipsum dolor sit amet, ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam non est elit. Curabitur gravida aliquetconsectetur adipiscing elit. Maecenas rutrum, ligula nec facilisisluctus, tortor et venenatis rhoncus, turpis nunc efficitur mi, a scelerisque nibh ipsum vel tortor. Vestibulum lacinia tortor in tortor finibus bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque id libero aliquet, iaculis sem id, faucibus lorem. Sed vulputate dolor ut erat hendrerit, et fringilla turpis scelerisque. Phasellus fringilla magna at tristique congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam non est elit. Curabitur gravida aliquet tellus malesuada, dui urna bibendum lacus, ac malesuada quam mi non justo. In varius erat nec lorem convallis pretium. Morbi id nulla quis est dignissim consequat. Curabitur facilisis nisl id nunc gravida, eu feugiat tellus dapibus. Proin gravida iaculis velit non fermentum. In scelerisque purus sed elit placerat, at scelerisque lacus suscipit. Nam luctus, tortor et venenatis rhoncus, turpis nunc efficitur mi, a scelerisque nibh ipsum vel tortor. Vestibulum lacinia tortor in tortor finibus bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque id libero aliquet, iaculis sem id, faucibus lorem. Sed vulputate dolor ut erat hendrerit, et fringilla turpis scelerisque. Phasellus fringilla magna at tristique congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam non est elit. Curabitur gravida aliquet tellus, id elementum justo venenatis a.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row gy-3">
+
+    <div class="col-md-3">
+        <div class="card mb-4" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+            <img src="{% static 'app/images/pics/n1.png' %}" class="card-img-top" alt="...">
+            <div class="card-body pb-3">
+                <h4 class="card-title p-3" style="color: #4540D9;"><b>Django</b></h4>
+
+
+
+                <h5 class="card-title text-muted p-3">Title of the Course</h5>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/E1.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">10+</h6>
+                    </div>
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/Ellipse%206.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">4.9</h6>
+                    </div>
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/E3.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">$100</h6>
+                    </div>
+                     <div class="d-flex justify-content-between mb-3">
+
+                <a class="btn btn-primary" style="background-color: #4540D9;" href="{% url 'study' %}">Go to Classroom</a>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card mb-4" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+            <img src="{% static 'app/images/pics/n2.png' %}" class="card-img-top" alt="...">
+            <div class="card-body pb-3">
+                <h4 class="card-title p-3" style="color: #4540D9;"><b>Machine Learning</b></h4>
+
+                <h5 class="card-title text-muted p-3">Title of the Course</h5>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/E1.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">10+</h6>
+                    </div>
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/Ellipse%206.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">4.9</h6>
+                    </div>
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/E3.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">$100</h6>
+                    </div>
+                     <div class="d-flex justify-content-between mb-3">
+
+                <a class="btn btn-primary" style="background-color: #4540D9;" href="{% url 'study2' %}">Go to Classroom</a>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card mb-4" style="box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);" >
+            <img src="{% static 'app/images/pics/n3.png' %}" class="card-img-top" alt="...">
+            <div class="card-body pb-3">
+                <h4 class="card-title p-3" style="color: #4540D9;"><b>Core Python</b></h4>
+
+                <h5 class="card-title text-muted p-3">Title of the Course</h5>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/E1.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">10+</h6>
+                    </div>
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/Ellipse%206.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">4.9</h6>
+                    </div>
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/E3.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">$100</h6>
+                    </div>
+                     <div class="d-flex justify-content-between mb-3">
+
+                <a class="btn btn-primary" style="background-color: #4540D9;" href="{% url 'study3' %}">Go to Classroom</a>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card mb-4">
+            <img src="{% static 'app/images/pics/n4.png' %}" class="card-img-top" alt="...">
+            <div class="card-body pb-3">
+                <h4 class="card-title p-3" style="color: #4540D9;"><b>Advance Python</b></h4>
+
+                <h5 class="card-title text-muted p-3">Title of the Course</h5>
+
+                <div class="row">
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/E1.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">10+</h6>
+                    </div>
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/Ellipse%206.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">4.9</h6>
+                    </div>
+                    <div class="col-2">
+                        <img src="{% static 'app/images/pics/E3.png' %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-2">
+                        <h6 class="card-title text-muted font-family-poppins">$100</h6>
+                    </div>
+                     <div class="d-flex justify-content-between mb-3">
+
+                <a class="btn btn-primary" style="background-color: #4540D9;" href="{% url 'study4' %}">Go to Classroom</a>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+  </div>
+{% endblock main-content %}

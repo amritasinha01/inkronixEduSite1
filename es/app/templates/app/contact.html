@@ -1,0 +1,95 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block main-content %}
+<section class="ftco-section pt-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-4">
+                <h1 class="heading-section text-muted"><b>Contact Us</b></h1>
+                <h6 class="text-muted">Any question or remark? Just write a message!</h6>
+            </div>
+        </div>
+        <div class="row justify-content-center shadow-lg p-3 mb-5 bg-body rounded">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                <h3 class="text-muted mb-4">Get in touch with us</h3>
+                                <div id="form-message-warning" class="mb-4"></div>
+                                <div id="form-message-success" class="text-muted mb-4">
+                                    Your message was sent, thank you!
+                                </div>
+                                <form action="{% url 'contact' %}" method="post">
+                                    {% csrf_token %}
+
+                                    <label for="name">Name</label><br>
+                                    <input type="text" id="name" name="name" value="{{name}}" style="width: 700px;"><br>
+
+                                    <label for="email">Email</label><br>
+                                    <input type="email" id="email" name="email" value="{{email}}" style="width: 700px;"><br>
+
+                                    <label for="phone">Phone Number</label><br>
+                                    <input type="number" id="phone" name="phone" value="{{phone}}" style="width: 700px;"><br>
+
+                                    <label for="message">Message</label><br>
+                                    <input type="text" id="message" name="message" value="{{message}}" style="width: 700px; height: 150px;"><br>
+                                    <hr>
+                                    <button type="submit" class="btn btn-primary" style="background-color: #6F42A8; margin-left: 630px;">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Left box contact information -->
+                        <div class="col-lg-4 col-md-5 d-flex align-items-stretch" style="border-radius: 15px; background-color: #5b21b6">
+                            <div class="pt-5 ps-4">
+                                <h3 class="text-white">Contact Information</h3>
+                                <h6 class="text-white ps-4 mb-4">Say something to start a live chat! Any question or remark? Just write a message!</h6>
+                                <div class="pt-4">
+                                    <span class="fa fa-map-marker text-white"></span>
+                                    <label class="ps-2 text-white">Address: Pvt. Limited, Delhi</label>
+                                </div>
+                                <div class="pt-4">
+                                    <span class="fa fa-phone-square text-white" aria-hidden="true"></span>
+                                    <label class="ps-2 text-white">Phone: +91 8753947589</label>
+                                </div>
+                                <div class="pt-4">
+                                    <span class="fa fa-envelope text-white"></span>
+                                    <label class="ps-2 text-white">E-Mail: Company@gmail.com</label>
+                                </div>
+                                <div class="pt-4">
+                                    <span class="fa fa-globe text-white"></span>
+                                    <label class="ps-2 text-white">Web-site: companyabc.pvt.in</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Images section -->
+<div class="container my-4" style="background-color: #F1F1FB; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+    <div class="row">
+        <div class="col-12">
+            <div class="col-12 pt-5 mt-5 ms-5">
+                <img class="ms-3" src="https://img.freepik.com/premium-vector/purple-gradiend-social-media-logo_197792-1883.jpg?w=2000" style="border-radius:50%" height="30px" width="35px">
+                <img class="ms-3" src="https://static.vecteezy.com/system/resources/previews/002/534/045/original/social-media-twitter-logo-blue-isolated-free-vector.jpg" style="border-radius:50%" height="30px" width="35px">
+                <img class="ms-3" src="https://static.vecteezy.com/system/resources/previews/006/892/623/original/discord-logo-icon-editorial-free-vector.jpg" style="border-radius:50%" height="30px" width="35px">
+                <img class="ms-3" src="https://st2.depositphotos.com/32990740/44155/v/600/depositphotos_441555684-stock-illustration-facebook-logo-symbol-iconcolorful-design.jpg" style="border-radius:50%" height="30px" width="35px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Add this script to hide the success message after a few seconds
+    setTimeout(function () {
+        document.getElementById('form-message-success').style.display = 'none';
+    }, 3000);
+</script>
+
+{% endblock main-content %}

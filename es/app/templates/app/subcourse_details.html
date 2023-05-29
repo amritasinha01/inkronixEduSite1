@@ -1,0 +1,254 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Subcourse Details{% endblock title %}
+
+{% block main-content %}
+<!-- subcourse_details.html -->
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>{{ subcourse.title }}</h1>
+            <table class="table table-striped">
+                <tr>
+                    <th>Price:</th>
+                    <td>${{ subcourse.price }}</td>
+                </tr>
+                <tr>
+                    <th>Discounted Price:</th>
+                    <td>${{ subcourse.discounted_price }}</td>
+                </tr>
+                <!-- Add other fields you want to display -->
+            </table>
+
+            <h4>Description:</h4>
+            <p class="text-justify text-muted">{{ subcourse.description }}</p>
+
+        </div>
+        <div class="col-md-4">
+    <div class="card">
+        {% if subcourse.image %}
+            <img src="{{ subcourse.image.url }}" alt="Book Image" class="card-img-top">
+        {% endif %}
+        <div class="card-body">
+            <div class="mt-4">
+                <h5 class="card-title text-muted">{{subcourse.title}}</h5>
+                <p class="card-text">Price: ${{ subcourse.price }}</p>
+                <p class="card-text">Discounted Price: ${{ subcourse.discounted_price }}</p>
+
+
+
+   <div class="mt-4 text-center">
+    <a href="{% url 'checkout' %}" class="btn btn-primary" style="background-color: #4540D9;">Enroll Now</a>
+
+
+    {% comment %}
+    <a href="{% url 'view_cart' %}">Add to Cart</a>
+    {% endcomment %}
+
+    <!-- <button class="btn btn-primary" style="background-color: #4540D9;">Buy</button> -->
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+
+     <div class="row p-5">
+    <div class="col">
+  <div class="card h-100 bg-light rounded-5 shadow-sm border-0 " >
+      <div class="row">
+  <div class="col-12 text-center p-5">
+    <h1><b>Why We Are The Best?</b></h1>
+    <p class="text-muted">Apart from many benefits, we are the complete solution for your learning.</p>
+  </div>
+</div>
+    <div class="row gy-3 my-3 p-5">
+      <div class="col-md-4">
+        <img src="{% static 'app\images\pics\Ellipse 6.png' %}" class="img-fluid rounded-start" alt="...">
+
+        <div class="card-body pb-3">
+          <h5 class="card-title font-family-poppins fw-bold fs-1" >500+</h5>
+            <h5 class="card-title font-family-poppins fw-bold fs-1" >Expert Mentors </h5>
+          <h6 class="card-title text-muted font-family-poppins">Lorem ipsum dolor sit amet  </h6>
+            <h6 class="card-title text-muted font-family-poppins">consectetur. Vulputate tortor </h6>
+            <h6 class="card-title text-muted font-family-poppins">pellentesque in integer donec </h6>
+            <h6 class="card-title text-muted font-family-poppins"> etiam.  </h6>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'app\images\pics\Ellipse 6 (1).png' %}" class="img-fluid rounded-start" alt="...">
+
+       <div class="card-body pb-3">
+          <h5 class="card-title font-family-poppins fw-bold fs-1" >500+</h5>
+            <h5 class="card-title font-family-poppins fw-bold fs-1" >Expert Mentors </h5>
+          <h6 class="card-title text-muted font-family-poppins">Lorem ipsum dolor sit amet  </h6>
+            <h6 class="card-title text-muted font-family-poppins">consectetur. Vulputate tortor </h6>
+            <h6 class="card-title text-muted font-family-poppins">pellentesque in integer donec </h6>
+            <h6 class="card-title text-muted font-family-poppins"> etiam.  </h6>
+        </div>
+      </div>
+
+ <div class="col-md-4">
+        <img src="{% static 'app\images\pics\Ellipse 6 (2).png' %}" class="img-fluid rounded-start" alt="...">
+
+        <div class="card-body pb-3">
+          <h5 class="card-title font-family-poppins fw-bold fs-1" >500+</h5>
+            <h5 class="card-title font-family-poppins fw-bold fs-1" >Expert Mentors </h5>
+          <h6 class="card-title text-muted font-family-poppins">Lorem ipsum dolor sit amet  </h6>
+            <h6 class="card-title text-muted font-family-poppins">consectetur. Vulputate tortor </h6>
+            <h6 class="card-title text-muted font-family-poppins">pellentesque in integer donec </h6>
+            <h6 class="card-title text-muted font-family-poppins"> etiam.  </h6>
+        </div>
+      </div>
+    </div>
+ <div class="row gy-3 my-3 p-5">
+      <div class="col-md-4">
+        <img src="{% static 'app\images\pics\E1.png' %}" class="img-fluid rounded-start" alt="...">
+
+        <div class="card-body pb-3">
+          <h5 class="card-title font-family-poppins fw-bold fs-1" >500+</h5>
+            <h5 class="card-title font-family-poppins fw-bold fs-1" >Expert Mentors </h5>
+          <h6 class="card-title text-muted font-family-poppins">Lorem ipsum dolor sit amet  </h6>
+            <h6 class="card-title text-muted font-family-poppins">consectetur. Vulputate tortor </h6>
+            <h6 class="card-title text-muted font-family-poppins">pellentesque in integer donec </h6>
+            <h6 class="card-title text-muted font-family-poppins"> etiam.  </h6>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <img src="{% static 'app\images\pics\E2.png' %}" class="img-fluid rounded-start" alt="...">
+
+       <div class="card-body pb-3">
+          <h5 class="card-title font-family-poppins fw-bold fs-1" >500+</h5>
+            <h5 class="card-title font-family-poppins fw-bold fs-1" >Expert Mentors </h5>
+          <h6 class="card-title text-muted font-family-poppins">Lorem ipsum dolor sit amet  </h6>
+            <h6 class="card-title text-muted font-family-poppins">consectetur. Vulputate tortor </h6>
+            <h6 class="card-title text-muted font-family-poppins">pellentesque in integer donec </h6>
+            <h6 class="card-title text-muted font-family-poppins"> etiam.  </h6>
+        </div>
+      </div>
+
+ <div class="col-md-4">
+        <img src="{% static 'app\images\pics\E3.png' %}" class="img-fluid rounded-start" alt="...">
+
+        <div class="card-body pb-3">
+          <h5 class="card-title font-family-poppins fw-bold fs-1" >500+</h5>
+            <h5 class="card-title font-family-poppins fw-bold fs-1" >Expert Mentors </h5>
+          <h6 class="card-title text-muted font-family-poppins">Lorem ipsum dolor sit amet  </h6>
+            <h6 class="card-title text-muted font-family-poppins">consectetur. Vulputate tortor </h6>
+            <h6 class="card-title text-muted font-family-poppins">pellentesque in integer donec </h6>
+            <h6 class="card-title text-muted font-family-poppins"> etiam.  </h6>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+ </div>
+
+
+    <div class="row gy-3">
+
+        <div class="col-md-4">
+            <div class="card mb-4" style="background-color: #4540D9;" >
+                <!-- Card content here -->
+                <div class="card p-4 bg-light">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-4">
+                  <img src="{% static 'app\images\pics\pp.jpg' %}" class="rounded-circle p-2" style="width: 80px;" alt="...">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <p>⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Good Platform</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <!-- Card content here -->
+                <div class="card p-4 bg-light" >
+            <div class="card-header">
+              <div class="row">
+                <div class="col-4">
+                  <img src="{% static 'app\images\pics\pp.jpg' %}" class="rounded-circle p-2" style="width: 80px;" alt="...">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <p>⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Good Platform</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+                 Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4" style="background-color: #4540D9;" >
+                <!-- Card content here -->
+                <div class="card p-4 bg-light" >
+            <div class="card-header">
+              <div class="row">
+                <div class="col-4">
+                  <img src="{% static 'app\images\pics\pp.jpg' %}" class="rounded-circle p-2" style="width: 80px;" alt="...">
+                </div>
+                <div class="col-8">
+                  <div class="card-body" >
+                    <h5 class="card-title">John Doe</h5>
+                    <p>⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Good Platform</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+
+            </div>
+        </div>
+
+
+
+</div>
+
+{% endblock main-content %}
